@@ -1,0 +1,10 @@
+--find-links https://download.pytorch.org/whl/cu117
+torch
+torchvision
+torchaudio
+imutils
+matplotlib
+numpy
+tqdm
+scikit-learn
+opencv-python
