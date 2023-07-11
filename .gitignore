@@ -1,6 +1,8 @@
 .env
 .venv
 __pycache__
-/dataset
+/dataset/annotations/
+/dataset/images/
 data.npy
-DatasetGenerator
+/DatasetGenerator
+/outputs/model*
