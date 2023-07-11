@@ -1,6 +1,6 @@
 import json
 import os
-from progressbar import progressbar
+from converter_src.progressbar import progressbar
 
 def change_instance(dataset_path, change_inst):
     files = os.listdir(dataset_path)

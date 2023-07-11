@@ -3,7 +3,7 @@ import cv2
 import os
 import json
 from datetime import datetime
-from progressbar import progressbar
+from converter_src.progressbar import progressbar
 import shutil
 
 def add_annotations(dataset_path, json_train, json_test, json_val, dataset_id, classes, path):
@@ -96,7 +96,7 @@ def add_annotations(dataset_path, json_train, json_test, json_val, dataset_id, c
                 
             json_data["images"].append(image)
 
-            shutil.copy(filepath, f"{path}\\dataset\\images\\{image['file_name']}")
+            shutil.copy(filepath, f"{path}\\images\\{image['file_name']}")
 
         progressbar(len(files), filenum+1)
     print()
@@ -105,11 +105,11 @@ def add_annotations(dataset_path, json_train, json_test, json_val, dataset_id, c
             
 def generate_annotation(dataset_path, path):
     
-    if not os.path.exists(f"{path}\\dataset\\images"):
+    if not os.path.exists(f"{path}\\images"):
         print('Does not exist')
-        os.makedirs(f'{path}\\dataset\\images')
-    if not os.path.exists(f"{path}\\dataset\\annotations"):
-        os.makedirs(f'{path}\\dataset\\annotations')
+        os.makedirs(f'{path}\\images')
+    if not os.path.exists(f"{path}\\annotations"):
+        os.makedirs(f'{path}\\annotations')
 
     json_data = {
         "info": {

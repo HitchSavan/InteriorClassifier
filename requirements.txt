@@ -1,10 +1,9 @@
---find-links https://download.pytorch.org/whl/cu117
-torch
-torchvision
-torchaudio
-imutils
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==2.0.1+cu117
+torchvision==0.15.2+cu117
+torchaudio==2.0.2+cu117
 matplotlib
 numpy
 tqdm
-scikit-learn
+albumentations
 opencv-python

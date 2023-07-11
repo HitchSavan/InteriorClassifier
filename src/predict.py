@@ -50,7 +50,7 @@ for i in range(len(test_images)):
 
     image = np.transpose(image, (2, 0, 1)).astype(np.float64)
 
-    image = torch.tensor(image, dtype=torch.float).cuda()
+    image = torch.tensor(image, dtype=torch.float).cuda() if torch.cuda.is_available() else torch.tensor(image, dtype=torch.float)
 
     image = torch.unsqueeze(image, 0)
     with torch.no_grad():
